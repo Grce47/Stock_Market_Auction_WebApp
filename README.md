@@ -1,6 +1,6 @@
 # Stock_Market_Auction_WebApp
 ## About
-Density Hack-An-Intern
+Density Hack-An-Intern\
 Problem Statement: Designing stock market auction mechanism.
 Features required:
 - OrderBook
