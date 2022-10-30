@@ -1,4 +1,4 @@
-# Desnity_Hackathon
+# Stock_Market_Auction_WebApp
 ## Contributors
 - Grace Sharma
 - Umang Singla
