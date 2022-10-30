@@ -1,13 +1,7 @@
 # Stock_Market_Auction_WebApp
-## Contributors
-- Grace Sharma
-- Umang Singla
-- Manav Sharma
-- Harsh Jha
-- Saurabh Sameer
 ## About
+Density Hack-An-Intern
 Problem Statement: Designing stock market auction mechanism.
-
 Features required:
 - OrderBook
 - Graph
@@ -15,7 +9,12 @@ Features required:
 - Executed trades history
 - Current Market Price
 - Notifications
-
+## Contributors
+- Grace Sharma
+- Umang Singla
+- Manav Sharma
+- Harsh Jha
+- Saurabh Sameer
 
 ## Instruction
 - **Create virtual environment**
