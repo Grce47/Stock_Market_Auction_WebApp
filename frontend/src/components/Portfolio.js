@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import store from "../store";
 import Userrow from "./Userrow";
 
@@ -17,7 +17,7 @@ function Portfolio() {
     const [users, update_users] = React.useState(store.getState().users);
 
     xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState === 4 && this.status === 200) {
             // Typical action to be performed when the document is ready:
             let data = JSON.parse(xhttp.responseText);
             store.dispatch({type: "userAdded", payload: data});

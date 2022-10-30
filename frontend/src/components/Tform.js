@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import store from "../store";
 
 function fetch_price(){
@@ -13,7 +13,7 @@ var xhttp = fetch_price();
 function Tform(){
     const [price, update_price] = useState(store.getState().marketprice);
     xhttp.onreadystatechange = function() {
-        if (this.readyState == 4 && this.status == 200) {
+        if (this.readyState === 4 && this.status === 200) {
             let data = JSON.parse(xhttp.responseText);
             store.dispatch({type: "updatePrice", payload: data});
             update_price(store.getState().marketprice);
@@ -36,11 +36,11 @@ function Tform(){
         let price = parseFloat(e.target[4].value);
         console.log(buy, user,type, amount, price);
 
-        let current_user = users.filter((u)=>{return u.name == user })[0];
+        let current_user = users.filter((u)=>{return u.name === user })[0];
 
         console.log(current_user);
 
-        if(buy == "buy"){
+        if(buy === "buy"){
             if(price*amount > current_user.fiat){
                 alert("Not enough money");
                 return;
@@ -103,7 +103,7 @@ function Tform(){
                 <div class="input-group mb-3">
                     
                     {
-                        type == "limit" ?<><span class="input-group-text" id="inputGroup-sizing-default">Price</span><input type="number" name="stock_amount" id="stock_amount" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" /></>
+                        type === "limit" ?<><span class="input-group-text" id="inputGroup-sizing-default">Price</span><input type="number" name="stock_amount" id="stock_amount" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-default" /></>
                         : <input type="number" name="price" id="price" value={price} hidden />
                     }
                 </div>

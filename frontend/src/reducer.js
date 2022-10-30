@@ -32,28 +32,28 @@ newstate.actions = [...state.actions, action];
         newstate.transaction = [...state.transaction];
         return newstate;
     case 'remove_pending_buy':
-        newstate.buyPending = state.buyPending.filter((u)=>{return u.id != action.payload.id});
+        newstate.buyPending = state.buyPending.filter((u)=>{return u.id !== action.payload.id});
         newstate.marketPrices = [...state.marketPrices];
         newstate.users = [...state.users];
         newstate.sellPending = [...state.sellPending];
         newstate.transaction = [...state.transaction];
         return newstate;
     case 'remove_pending_sell':
-        newstate.sellPending = state.sellPending.filter((u)=>{return u.id != action.payload.id});
+        newstate.sellPending = state.sellPending.filter((u)=>{return u.id !== action.payload.id});
         newstate.marketPrices = [...state.marketPrices];
         newstate.users = [...state.users];
         newstate.buyPending = [...state.buyPending];
         newstate.transaction = [...state.transaction];
         return newstate;
     case 'update_pending_buy':
-        newstate.buyPending = state.buyPending.map((u)=>{if(u.id == action.payload.id){u.quantity = action.payload.quantity;} return u;});
+        newstate.buyPending = state.buyPending.map((u)=>{if(u.id === action.payload.id){u.quantity = action.payload.quantity;} return u;});
         newstate.marketPrices = [...state.marketPrices];
         newstate.users = [...state.users];
         newstate.sellPending = [...state.sellPending];
         newstate.transaction = [...state.transaction];
         return newstate;
     case 'update_pending_sell':
-        newstate.sellPending = state.sellPending.map((u)=>{if(u.id == action.payload.id){u.quantity = action.payload.quantity;} return u;});
+        newstate.sellPending = state.sellPending.map((u)=>{if(u.id === action.payload.id){u.quantity = action.payload.quantity;} return u;});
         newstate.marketPrices = [...state.marketPrices];
         newstate.users = [...state.users];
         newstate.buyPending = [...state.buyPending];
@@ -67,7 +67,7 @@ newstate.actions = [...state.actions, action];
         newstate.sellPending = [...state.sellPending];
         return newstate;
     case 'update_user':
-        newstate.users = state.users.map((u)=>{if(u.name == action.payload.name){u.stocks = action.payload.stocks; u.fiat = action.payload.fiat;} return u;});
+        newstate.users = state.users.map((u)=>{if(u.name === action.payload.name){u.stocks = action.payload.stocks; u.fiat = action.payload.fiat;} return u;});
         newstate.marketPrices = [...state.marketPrices];
         newstate.transaction = [...state.transaction];
         newstate.buyPending = [...state.buyPending];

@@ -4,8 +4,6 @@ import Tform from "./components/Tform";
 import OrderBook from "./components/OrderBook";
 import Navbar from "./components/Navbar";
 import Transaction from "./components/Transaction";
-import Actions from "./components/Actions";
-import store from "./store";
 import React, { useState } from "react";
 import "./App.css";
 
