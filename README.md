@@ -37,3 +37,8 @@ cd frontend                  # to go to frontend directory
 npm i                        # to update all node modules
 npm start                    # to start frontend server
 ```
+## Screenshot of web application
+![Screenshot from 2023-03-14 14-35-13](https://user-images.githubusercontent.com/77105126/224951147-28df8806-afde-4d48-b6aa-b3a30ac407ae.png)
+![Screenshot from 2023-03-14 14-38-42](https://user-images.githubusercontent.com/77105126/224951404-f9501db7-fec3-468f-961a-2591cabcab01.png)
+
+
